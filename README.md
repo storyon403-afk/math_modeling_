@@ -1,7 +1,9 @@
 # MathModeling
 数学建模的一些准备
 
-目录大概设想成这样子：
+###目录大概设想成这样子：###
+
+```text
 MathModeling/
 │
 ├── README.md
@@ -10,7 +12,7 @@ MathModeling/
 ├── code/
 │   ├── python/
 │   ├── matlab/
-│   ├── c/
+│   ├── java/
 │   └── cpp/
 │
 ├── modeling/
