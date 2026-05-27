@@ -12,7 +12,7 @@ MathModeling/
 ├── code/
 │   ├── python/
 │   ├── matlab/
-│   ├── java/
+│   ├── c/
 │   └── cpp/
 │
 ├── modeling/
