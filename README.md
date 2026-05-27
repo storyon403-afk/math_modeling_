@@ -25,8 +25,13 @@ MathModeling/
 │   ├── datasets/
 │   └── references/
 │
+│
+├── congfig_study/
+│   ├── github_using.md
+│   
 ├── notes/
 │
 ├── latex/
 │
 └── images/
+
