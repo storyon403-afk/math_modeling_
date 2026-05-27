@@ -1,2 +1,30 @@
 # MathModeling
 数学建模的一些准备
+
+目录大概设想成这样子：
+MathModeling/
+│
+├── README.md
+├── .gitignore
+│
+├── code/
+│   ├── python/
+│   ├── matlab/
+│   ├── c/
+│   └── cpp/
+│
+├── modeling/
+│   ├── optimization/
+│   ├── graph/
+│   └── stochastic/
+│
+├── resources/
+│   ├── papers/
+│   ├── datasets/
+│   └── references/
+│
+├── notes/
+│
+├── latex/
+│
+└── images/
