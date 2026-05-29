@@ -1,0 +1,78 @@
+clc; clear;
+
+T = 100;
+Tmin = 1e-6;
+alpha = 0.98;
+
+x = [rand, rand];
+while ~is_feasible(x)
+    x = [rand, rand];
+end
+
+f = objective(x);
+
+best_x = x;
+best_f = f;
+
+while T > Tmin
+
+    for k = 1:100
+
+        % 产生新解
+        x_new = x + 0.1*randn(1,2);
+
+        % 边界修复
+        x_new = max(x_new,[0 0]);
+        x_new = min(x_new,[3 3]);
+
+        if ~is_feasible(x_new)
+            continue;
+        end
+
+        f_new = objective(x_new);
+
+        dE = f_new - f;
+
+        % Metropolis准则
+        if dE < 0 || rand < exp(-dE/T)
+
+            x = x_new;
+            f = f_new;
+
+            if f < best_f
+                best_x = x;
+                best_f = f;
+            end
+        end
+    end
+
+    T = alpha*T;
+end
+
+fprintf('x1=%f\n',best_x(1));
+fprintf('x2=%f\n',best_x(2));
+fprintf('f=%f\n',best_f);
+
+%% 目标函数
+function y = objective(x)
+
+x1 = x(1);
+x2 = x(2);
+
+y = x1^2 + x2^2 + 2*sin(2*x1) + cos(x2);
+
+end
+
+%% 可行域
+function flag = is_feasible(x)
+
+x1 = x(1);
+x2 = x(2);
+
+flag = ...
+    x1+x2>=1 && ...
+    x1^2+x2^2<=9 && ...
+    sin(x1)+x2<=1.5 && ...
+    x1>=0 && x2>=0;
+
+end
