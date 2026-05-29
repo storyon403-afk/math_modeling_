@@ -1,5 +1,3 @@
-# ga_core.py
-
 import numpy as np
 
 
