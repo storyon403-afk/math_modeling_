@@ -261,9 +261,7 @@ c2(index) = remain;
 
 end
 
-%% ======================
 % 交换变异
-%% ======================
 
 function child = mutation(child)
 
