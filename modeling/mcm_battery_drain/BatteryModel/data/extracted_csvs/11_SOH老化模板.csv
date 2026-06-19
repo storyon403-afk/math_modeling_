@@ -1,0 +1,6 @@
+﻿SOH老化数据整理模板,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10
+,,,,,,,,,,
+source_dataset,cell_id,cycle_index,capacity_Ah,nominal_capacity_Ah,,temperature_C,C_rate,SOC_min,SOC_max,notes
+NASA/Oxford/MIT,cell_1,0,,,,,,,,SOH = capacity_Ah / nominal_capacity_Ah
+NASA/Oxford/MIT,cell_1,1,,,,,,,,
+NASA/Oxford/MIT,cell_1,2,,,,,,,,

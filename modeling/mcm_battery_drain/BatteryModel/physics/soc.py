@@ -1,13 +1,7 @@
 from modeling.mcm_battery_drain.BatteryModel.models.state import BatteryState
+from modeling.mcm_battery_drain.BatteryModel.params.soc_params import SocParams
 from modeling.mcm_battery_drain.BatteryModel.params.thermal_params import ThermalParams
 from modeling.mcm_battery_drain.BatteryModel.physics.thermal import effective_capacity
-
-class SocParams:
-
-    def __init__(self):
-
-        # 库仑效率
-        self.eta = 1.0
 
 def soc_derivative(
     state: BatteryState,

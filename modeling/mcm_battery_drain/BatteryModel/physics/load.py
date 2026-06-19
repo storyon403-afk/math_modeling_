@@ -1,5 +1,5 @@
 from models.behavior import UserBehavior
-from params.loadparams import LoadPowerParams
+from modeling.mcm_battery_drain.BatteryModel.params.load_params import LoadPowerParams
 
 def weak_signal_penalty(
     signal_quality: float,

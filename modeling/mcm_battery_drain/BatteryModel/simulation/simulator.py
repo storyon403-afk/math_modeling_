@@ -10,6 +10,8 @@ from modeling.mcm_battery_drain.BatteryModel.physics.electrical import (
     update_voltage
 )
 
+from modeling.mcm_battery_drain.BatteryModel.physics.tte import calc_tte
+
 from modeling.mcm_battery_drain.BatteryModel.physics.thermal import (
     update_temperature
 )
@@ -120,6 +122,12 @@ def simulate(
 
             state.time += dt
 
+            tte = calc_tte(
+                state,
+                q_nom,
+                p_load
+            )
+
             history.append({
                 "time": state.time,
                 "soc": state.soc,
@@ -129,7 +137,8 @@ def simulate(
                 "current": state.current,
                 "v1": state.v1,
                 "v2": state.v2,
-                "power": p_load
+                "power": p_load,
+                "tte": tte
             })
 
             if state.soc <= 0.05:
@@ -141,4 +150,4 @@ def simulate(
             if state.temp >= thermal_params.T_max:
                 break
 
-            return history
+    return history

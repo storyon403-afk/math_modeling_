@@ -149,3 +149,109 @@ def heat_map_plot(history):
     plt.title("Correlation Matrix")
 
     plt.show()
+
+def tte_plot(history):
+
+    df = pd.DataFrame(history)
+
+    plt.figure(figsize=(8, 5))
+
+    plt.plot(
+        df["time"] / 3600,
+        df["tte"] / 3600
+    )
+
+    plt.xlabel("Simulation Time (h)")
+    plt.ylabel("Remaining Runtime TTE (h)")
+    plt.title("TTE vs Time")
+
+    plt.grid(True)
+
+    plt.tight_layout()
+
+    plt.savefig("tte_time.png", dpi=300)
+
+    plt.show()
+
+def soc_tte_plot(history):
+
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
+    df = pd.DataFrame(history)
+
+    plt.figure(figsize=(8, 5))
+
+    plt.plot(
+        df["soc"] * 100,
+        df["tte"] / 3600
+    )
+
+    plt.xlabel("SOC (%)")
+    plt.ylabel("Remaining Runtime TTE (h)")
+    plt.title("SOC vs TTE")
+
+    plt.grid(True)
+
+    plt.tight_layout()
+
+    plt.savefig("soc_tte.png", dpi=300)
+
+    plt.show()
+
+def power_tte_plot(history):
+
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
+    df = pd.DataFrame(history)
+
+    plt.figure(figsize=(8, 5))
+
+    plt.scatter(
+        df["power"],
+        df["tte"] / 3600,
+        s=10
+    )
+
+    plt.xlabel("Power Consumption (W)")
+    plt.ylabel("Remaining Runtime TTE (h)")
+    plt.title("Power vs TTE")
+
+    plt.grid(True)
+
+    plt.tight_layout()
+
+    plt.savefig("power_tte.png", dpi=300)
+
+    plt.show()
+
+def tte_heatmap(history):
+
+    import pandas as pd
+    import matplotlib.pyplot as plt
+
+    df = pd.DataFrame(history)
+
+    plt.figure(figsize=(8, 6))
+
+    scatter = plt.scatter(
+        df["soc"] * 100,
+        df["temp"],
+        c=df["tte"] / 3600
+    )
+
+    plt.xlabel("SOC (%)")
+    plt.ylabel("Temperature (°C)")
+    plt.title("SOC-Temperature-TTE Map")
+
+    plt.colorbar(
+        scatter,
+        label="TTE (h)"
+    )
+
+    plt.tight_layout()
+
+    plt.savefig("tte_heatmap.png", dpi=300)
+
+    plt.show()

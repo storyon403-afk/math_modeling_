@@ -1,0 +1,11 @@
+﻿公开数据源与用途清单,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7
+,,,,,,,
+数据源,类型,可支持的模型模块,核心字段/内容,优先级,是否已在本文件中整理,官方/主要URL,使用说明
+Android Power Profile,手机组件功耗参数,功耗模型 P_screen/P_CPU/P_WiFi/P_modem/P_GPS,组件电流mA、功耗状态、screen/cpu/wifi/radio/gps/audio等,高,已整理为手机功耗参数表,https://source.android.com/docs/core/power,用于将手机硬件组件状态映射为功率输入；可结合具体机型 power_profile.xml。
+AOSP Power values,Android功耗字段说明,功耗模型参数解释,power_profile.xml 中可用字段说明,高,作为字段解释与来源,https://source.android.com/docs/core/power/values,用于解释电流/功耗字段含义。
+Battery Historian / Batterystats,手机行为日志工具,"用户行为层 b(t), u_c(t), r(t), g(t), a_bg(t)",屏幕、CPU、网络、定位、wakelock、应用后台活动,中,未导入原始日志；提供提取模板,https://developer.android.com/topic/performance/power/setup-battery-historian,若有Android设备，可导出bugreport并用Battery Historian获得行为日志。
+NASA Li-ion Battery Aging Dataset,锂电池动态与老化实验数据,SOC、端电压、热模型、SOH、TTE,"time, voltage, current, temperature, capacity, impedance, cycle",高,列入外部数据源；需单独下载处理,https://data.nasa.gov/dataset/li-ion-battery-aging-datasets,适合验证 V_t(t)、I(t)、T(t)、容量衰减与截止电压时间。
+CALCE Battery Data,锂电池OCV/阻抗/动态工况数据,Thevenin 2RC、OCV-SOC、SOH,"OCV, impedance, cycling, storage, dynamic profiles",高,列入外部数据源；需单独下载处理,https://calce.umd.edu/battery-data,适合拟合 U_oc(z)、R0、R1、C1、R2、C2。
+TU Berlin Li-ion Battery Drive Cycle Dataset,多温度动态循环SOC数据,温度修正 f_T(T)、SOC验证,12种drive cycle、5种环境温度、reference SOC,中高,列入外部数据源；需单独下载处理,https://depositonce.tu-berlin.de/items/7f68932b-4d43-4f49-a5d8-914b00039f87,适合说明不同环境温度下SOC估计与容量可用性变化。
+Oxford Battery Degradation Dataset,长期循环老化数据,SOH老化模型,8个锂离子电池长期循环容量衰减,中,列入外部数据源；需单独下载处理,https://ora.ox.ac.uk/objects/uuid:03ba4b01-cfed-46d3-9b1a-7d4a7bdf6fac,适合拟合或验证 SOH(t) 和容量衰减趋势。
+MIT-Stanford-Toyota Cycle Life Dataset,大规模循环寿命数据,SOH/RUL趋势分析,124个商用LFP/石墨电池，快充工况，循环寿命范围,中,列入外部数据源；需单独下载处理,https://web.mit.edu/braatzgroup/Severson_NatureEnergy_2019.pdf,适合做SOH/RUL补充分析；不必作为主数据。

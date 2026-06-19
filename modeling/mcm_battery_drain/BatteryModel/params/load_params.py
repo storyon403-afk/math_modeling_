@@ -15,7 +15,7 @@ class LoadPowerParams:
         self.beta = 2.2
 
         self.p_net0 = 0.4
-        self.kr = 1.0
+        self.kr = 1.0   
         self.ks = 0.8
 
         self.s_ref = 0.7

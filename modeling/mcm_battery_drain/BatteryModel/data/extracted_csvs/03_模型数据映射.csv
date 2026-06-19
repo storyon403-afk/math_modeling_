@@ -1,0 +1,11 @@
+﻿模型模块—所需数据—当前可用性映射,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6
+,,,,,,
+模型层,关键变量/参数,必须数据,当前已有数据,缺口,推荐来源,论文中建议写法
+用户行为层,"b(t), u_c(t), u_g(t), r(t), s(t), g(t), a_bg(t)",亮度、CPU/GPU负载、网络流量、信号质量、GPS、后台任务,Scenario表已有亮度、CPU、WiFi/Modem、GPS、后台功耗；GPU未单独给出,缺独立GPU负载；弱信号可用Modem TX high近似,Android Batterystats / Power Profile,将GPU并入media/graphics功耗，或设置为场景参数。
+负载功耗模型,"P_load, P_screen, P_CPU, P_net, P_GPS, P_bg",各模块功率或电流参数,Power_Profile和Scenario表已有,基本够用,Android Power Profile,可直接作为模型参数与场景化功耗输入。
+功耗-电流耦合,"P=I V_t, I(t)",电压、电流、功率时间序列,当前只有功率；无手机级I/V时间序列,"缺I(t), V_t(t)",NASA/CALCE,用电池公开数据验证电流-电压关系，手机侧用功率驱动。
+Thevenin 2RC,"U_oc(z), R0, R1, C1, R2, C2, V1, V2",OCV-SOC、脉冲/动态电流、电压响应、阻抗,当前没有,缺完整2RC参数,CALCE Battery Data,用公开OCV/阻抗/动态工况拟合2RC参数。
+SOC模型,"z(t), Q_eff, SOH, f_T",SOC/容量、电流、电压、时间,TTE表可支持基准SOC模型；缺实测SOC曲线,需要实测SOC/容量曲线,NASA/TU Berlin,基准模型用能量守恒；增强模型用公开锂电池数据验证。
+热模型,"T(t), T_env, C_th, h",电池温度、环境温度、电流、内阻,当前没有温度时间序列,"缺T(t), T_env, C_th, h",NASA/TU Berlin,用高负载仿真和公开温度曲线验证热趋势。
+SOH老化模型,"SOH(t), Q_loss, cycle, capacity",循环次数、容量衰减、温度/倍率历史,有cold aged情景但非动态老化数据,缺长期循环容量衰减,NASA/Oxford/MIT-Stanford,短期TTE把SOH设为参数；长期分析引用老化数据。
+TTE预测,"TTE, z_min, V_cut",初始SOC、关机阈值、场景功率、真实/合理终止时间,已有基准TTE结果,缺独立实测TTE,自建实验/NASA放电终止时间,TTE表作为基准预测，不作为独立实测验证。
