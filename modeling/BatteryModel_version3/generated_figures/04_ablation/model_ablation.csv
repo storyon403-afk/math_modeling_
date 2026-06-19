@@ -1,0 +1,21 @@
+﻿case,model,tte_h,stop_reason,relative_error_to_full_pct
+Standby,Baseline energy/power,19.522349231375642,analytic estimate,3.1564028077973134
+Standby,Model A: SOC,18.941666666666666,SOC threshold,0.08806693086745426
+Standby,Model B: SOC + 2RC,18.925,SOC threshold,0.0
+Standby,Model C: + thermal,18.925,SOC threshold,0.0
+Standby,Full model: + SOH,18.925,SOC threshold,0.0
+Game,Baseline energy/power,3.304691445299055,analytic estimate,4.450300290400339
+Game,Model A: SOC,3.1972222222222224,SOC threshold,1.0535557506584827
+Game,Model B: SOC + 2RC,3.147222222222222,voltage cutoff,-0.5267778753292344
+Game,Model C: + thermal,3.1638888888888888,voltage cutoff,0.0
+Game,Full model: + SOH,3.1638888888888888,voltage cutoff,0.0
+Low-temperature game,Baseline energy/power,3.304691445299055,analytic estimate,39.634849801368524
+Low-temperature game,Model A: SOC,3.1972222222222224,SOC threshold,35.09389671361503
+Low-temperature game,Model B: SOC + 2RC,3.147222222222222,voltage cutoff,32.981220657276985
+Low-temperature game,Model C: + thermal,2.3666666666666667,voltage cutoff,0.0
+Low-temperature game,Full model: + SOH,2.3666666666666667,voltage cutoff,0.0
+Aged game,Baseline energy/power,3.304691445299055,analytic estimate,33.672912394119074
+Aged game,Model A: SOC,3.1972222222222224,SOC threshold,29.325842696629216
+Aged game,Model B: SOC + 2RC,3.147222222222222,voltage cutoff,27.303370786516844
+Aged game,Model C: + thermal,3.1638888888888888,voltage cutoff,27.97752808988763
+Aged game,Full model: + SOH,2.4722222222222223,voltage cutoff,0.0

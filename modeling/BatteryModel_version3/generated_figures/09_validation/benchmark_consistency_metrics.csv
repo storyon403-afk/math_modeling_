@@ -1,0 +1,2 @@
+﻿MAE_h,RMSE_h,MAPE_pct,n,validation_type
+1.3115317252682657,1.8892539810996696,33.24917822181298,28,benchmark/physical-consistency comparison; not experimental validation

@@ -1,0 +1,6 @@
+   scenario  initial_soh    tte_h    stop_reason  final_voltage_v  final_soc  tte_decline_pct
+Mobile game          1.0 3.163889 voltage cutoff         2.999874   0.036357         0.000000
+Mobile game          0.9 2.813889 voltage cutoff         2.999774   0.046901        11.062335
+Mobile game          0.8 2.472222 voltage cutoff         2.999450   0.057067        21.861282
+Mobile game          0.7 2.138889 voltage cutoff         2.998644   0.066680        32.396839
+Results saved to: /Users/storyon/study/math_modeling_/modeling/BatteryModel_图表复现版/generated_figures

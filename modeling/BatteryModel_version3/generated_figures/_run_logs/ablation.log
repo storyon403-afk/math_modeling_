@@ -1,0 +1,22 @@
+                case                 model     tte_h       stop_reason  relative_error_to_full_pct
+             Standby Baseline energy/power 19.522349 analytic estimate                    3.156403
+             Standby          Model A: SOC 18.941667     SOC threshold                    0.088067
+             Standby    Model B: SOC + 2RC 18.925000     SOC threshold                    0.000000
+             Standby    Model C: + thermal 18.925000     SOC threshold                    0.000000
+             Standby     Full model: + SOH 18.925000     SOC threshold                    0.000000
+                Game Baseline energy/power  3.304691 analytic estimate                    4.450300
+                Game          Model A: SOC  3.197222     SOC threshold                    1.053556
+                Game    Model B: SOC + 2RC  3.147222    voltage cutoff                   -0.526778
+                Game    Model C: + thermal  3.163889    voltage cutoff                    0.000000
+                Game     Full model: + SOH  3.163889    voltage cutoff                    0.000000
+Low-temperature game Baseline energy/power  3.304691 analytic estimate                   39.634850
+Low-temperature game          Model A: SOC  3.197222     SOC threshold                   35.093897
+Low-temperature game    Model B: SOC + 2RC  3.147222    voltage cutoff                   32.981221
+Low-temperature game    Model C: + thermal  2.366667    voltage cutoff                    0.000000
+Low-temperature game     Full model: + SOH  2.366667    voltage cutoff                    0.000000
+           Aged game Baseline energy/power  3.304691 analytic estimate                   33.672912
+           Aged game          Model A: SOC  3.197222     SOC threshold                   29.325843
+           Aged game    Model B: SOC + 2RC  3.147222    voltage cutoff                   27.303371
+           Aged game    Model C: + thermal  3.163889    voltage cutoff                   27.977528
+           Aged game     Full model: + SOH  2.472222    voltage cutoff                    0.000000
+Results saved to: /Users/storyon/study/math_modeling_/modeling/BatteryModel_图表复现版/generated_figures

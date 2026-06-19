@@ -1,0 +1,21 @@
+﻿ambient_temp_c,initial_soh,tte_h,stop_reason
+-10,0.7,1.2583333333333333,voltage cutoff
+0,0.7,1.5291666666666666,voltage cutoff
+10,0.7,1.8041666666666667,voltage cutoff
+25,0.7,2.1416666666666666,voltage cutoff
+40,0.7,2.2,voltage cutoff
+-10,0.8,1.4916666666666667,voltage cutoff
+0,0.8,1.7958333333333334,voltage cutoff
+10,0.8,2.1041666666666665,voltage cutoff
+25,0.8,2.475,voltage cutoff
+40,0.8,2.533333333333333,voltage cutoff
+-10,0.9,1.7416666666666667,voltage cutoff
+0,0.9,2.075,voltage cutoff
+10,0.9,2.4125,voltage cutoff
+25,0.9,2.816666666666667,voltage cutoff
+40,0.9,2.870833333333333,SOC threshold
+-10,1.0,2.004166666666667,voltage cutoff
+0,1.0,2.3666666666666667,voltage cutoff
+10,1.0,2.7333333333333334,voltage cutoff
+25,1.0,3.1666666666666665,voltage cutoff
+40,1.0,3.191666666666667,SOC threshold

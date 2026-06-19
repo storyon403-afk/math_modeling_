@@ -248,5 +248,5 @@ def main():
         raise ValueError("只能输入整数1，2进行选择")
 
 
-if __name__ == "__main__":
-    main()
+##if __name__ == "__main__":
+##    main()

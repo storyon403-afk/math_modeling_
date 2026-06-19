@@ -1,0 +1,26 @@
+﻿network_traffic,signal_quality,tte_h,stop_reason
+0.0,1,2.8583333333333334,voltage cutoff
+0.25,1,2.745833333333333,voltage cutoff
+0.5,1,2.6416666666666666,voltage cutoff
+0.75,1,2.5458333333333334,voltage cutoff
+1.0,1,2.4583333333333335,voltage cutoff
+0.0,2,2.9791666666666665,voltage cutoff
+0.25,2,2.8583333333333334,voltage cutoff
+0.5,2,2.745833333333333,voltage cutoff
+0.75,2,2.6416666666666666,voltage cutoff
+1.0,2,2.5458333333333334,voltage cutoff
+0.0,3,3.1125,voltage cutoff
+0.25,3,2.9791666666666665,voltage cutoff
+0.5,3,2.8583333333333334,voltage cutoff
+0.75,3,2.745833333333333,voltage cutoff
+1.0,3,2.6416666666666666,voltage cutoff
+0.0,4,3.254166666666667,voltage cutoff
+0.25,4,3.1125,voltage cutoff
+0.5,4,2.9791666666666665,voltage cutoff
+0.75,4,2.8583333333333334,voltage cutoff
+1.0,4,2.745833333333333,voltage cutoff
+0.0,5,3.4125,voltage cutoff
+0.25,5,3.254166666666667,voltage cutoff
+0.5,5,3.1125,voltage cutoff
+0.75,5,2.9791666666666665,voltage cutoff
+1.0,5,2.8583333333333334,voltage cutoff

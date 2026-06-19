@@ -1,0 +1,2 @@
+﻿scenario,actual_tte_h,stop_reason,final_soc,final_soh,final_temperature_c,final_voltage_v
+Mobile game,3.1625,voltage cutoff,0.03677544721224985,0.9999999999920592,29.59035286891195,2.9997848110081726

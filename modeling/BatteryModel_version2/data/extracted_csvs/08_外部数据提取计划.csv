@@ -1,0 +1,8 @@
+﻿外部公开数据提取计划,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5
+,,,,,
+数据源,建议下载/提取对象,核心字段,整理后目标Sheet,用于拟合/验证,备注
+NASA Li-ion Battery Aging Dataset,单个或多个放电cycle,"cycle_id, time_s, voltage_V, current_A, temperature_C, capacity_Ah, operation_type, ambient_temp_C",09_电池动态数据模板,SOC曲线、端电压、温升、TTE、SOH容量衰减,选择放电周期用于TTE，循环容量用于SOH。
+CALCE Battery Data,OCV测量、HPPC/动态放电、阻抗数据,"SOC, OCV_V, time_s, current_A, voltage_V, impedance, temperature_C",10_2RC参数模板,"U_oc(z), R0, R1C1, R2C2拟合",优先选同一化学体系与温度条件下的数据。
+TU Berlin Drive Cycle Dataset,不同温度下drive cycle数据,"time_s, voltage_V, current_A, temperature_C, reference_SOC, ambient_temp_C, cycle_type",09_电池动态数据模板,温度影响、SOC估计、f_T(T),可对比不同温度下同类工况SOC与电压差异。
+Oxford Battery Degradation Dataset,长期循环容量数据,"cell_id, cycle_index, capacity_Ah, voltage_curve, current_A, temperature_C",11_SOH老化模板,SOH容量衰减趋势,适合老化模型趋势验证。
+MIT-Stanford-Toyota Dataset,电池循环寿命与早期循环特征,"cell_id, cycle_life, cycle_index, capacity_Ah, charge_policy, voltage_curve",11_SOH老化模板,SOH/RUL补充分析,数据规模较大，适合补充，不必作为主模型。

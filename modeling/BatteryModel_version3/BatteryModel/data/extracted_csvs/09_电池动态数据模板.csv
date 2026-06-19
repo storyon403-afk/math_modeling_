@@ -1,0 +1,6 @@
+﻿电池动态数据整理模板,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12,Unnamed: 13
+,,,,,,,,,,,,,
+source_dataset,cell_id,cycle_id,operation_type,time_s,current_A,voltage_V,temperature_C,ambient_temp_C,capacity_Ah,SOC_reference,SOC_coulomb_counting,,notes
+NASA/CALCE/TU Berlin,B0005,1,discharge,0,,,,25,,,,,从公开数据下载后按列填入；power_W为公式列。
+NASA/CALCE/TU Berlin,B0005,1,discharge,10,,,,25,,,,,
+NASA/CALCE/TU Berlin,B0005,1,discharge,20,,,,25,,,,,
