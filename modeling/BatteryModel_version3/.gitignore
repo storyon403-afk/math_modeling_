@@ -1,0 +1,29 @@
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Runtime outputs
+results/
+full_results/
+
+# Reproducible run logs
+generated_figures/_run_logs/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex*
+
+# Temporary files
+*.tmp
+*.bak

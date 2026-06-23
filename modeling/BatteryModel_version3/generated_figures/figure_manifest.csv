@@ -9,7 +9,7 @@
 02_temperature/temperature_relative_aging_rate.png,True,144453
 03_soh/soh_tte.png,True,105060
 03_soh/soh_voltage_trajectories.png,True,239393
-04_ablation/model_ablation.png,True,121358
+04_ablation/model_ablation.png,True,108810
 05_stop_reason/stop_reason_map.png,True,78710
 06_interactions/brightness_cpu_heatmap.png,True,76132
 06_interactions/brightness_cpu_contour.png,True,103196
@@ -23,9 +23,9 @@
 06_interactions/temperature_soh_heatmap.png,True,83671
 06_interactions/temperature_soh_contour.png,True,101822
 06_interactions/temperature_soh_surface.png,True,383372
-07_power_contribution/power_contribution_stacked.png,True,186508
+07_power_contribution/power_contribution_stacked.png,True,199833
 08_monte_carlo/monte_carlo_histogram.png,True,64994
 08_monte_carlo/monte_carlo_boxplot.png,True,50305
 09_validation/predicted_vs_reference.png,True,135797
 10_timestep/timestep_error.png,True,93327
-10_timestep/timestep_runtime.png,True,104357
+10_timestep/timestep_runtime.png,True,100588

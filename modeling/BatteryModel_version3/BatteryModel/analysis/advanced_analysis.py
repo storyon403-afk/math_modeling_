@@ -327,11 +327,14 @@ def model_ablation_analysis(output_dir: str | Path, quick: bool = False) -> pd.D
     save_dataframe(df, output / "model_ablation.csv")
 
     pivot = df.pivot(index="case", columns="model", values="tte_h")
+    
     fig, ax = plt.subplots(figsize=(10.5, 5.8))
     pivot.plot(kind="bar", ax=ax)
     ax.set_xlabel("")
     ax.set_ylabel("TTE (h)")
     ax.set_title("Incremental model / ablation comparison")
+
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=0, ha="center")
     ax.grid(axis="y", alpha=0.3)
     ax.legend(fontsize=8)
     _save_fig(fig, output / "model_ablation.png")
@@ -487,18 +490,29 @@ def power_contribution_analysis(output_dir: str | Path) -> pd.DataFrame:
     save_dataframe(df, output / "power_contribution.csv")
 
     components = ["base", "screen", "cpu", "gpu", "network", "gps", "background"]
-    fig, ax = plt.subplots(figsize=(11.0, 5.8))
+    fig, ax = plt.subplots(figsize=(12.0, 6))
+
     bottom = np.zeros(len(df))
     x = np.arange(len(df))
+
     for component in components:
         values = df[f"{component}_power_w"].to_numpy()
         ax.bar(x, values, bottom=bottom, label=component)
         bottom += values
-    ax.set_xticks(x, df["scenario"], rotation=20, ha="right")
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(df["scenario"], rotation=35, ha="right")
+
     ax.set_ylabel("Power (W)")
     ax.set_title("Component-level power contribution by scenario")
     ax.grid(axis="y", alpha=0.25)
-    ax.legend(ncol=4)
+
+    ax.legend(ncol=2, bbox_to_anchor=(1.02, 1), loc="upper left", fontsize=9)
+
+    plt.subplots_adjust(bottom=0.25)
+
+    ax.set_ylim(0, bottom.max() * 1.08)
+
     _save_fig(fig, output / "power_contribution_stacked.png")
     return df
 

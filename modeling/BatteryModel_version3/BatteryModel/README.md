@@ -15,7 +15,7 @@
 ## 安装
 
 ```bash
-pip install -r BatteryModel/requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 在 `BatteryModel` 的上一级目录运行：

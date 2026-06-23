@@ -1,6 +1,0 @@
- dt_s    tte_h  runtime_s    stop_reason  absolute_tte_error_h  relative_tte_error_pct
-  1.0 3.160833   0.233464 voltage cutoff              0.000000                0.000000
-  5.0 3.162500   0.048451 voltage cutoff              0.001667                0.052729
- 10.0 3.163889   0.025122 voltage cutoff              0.003056                0.096669
- 30.0 3.175000   0.008410 voltage cutoff              0.014167                0.448194
-Results saved to: /Users/storyon/study/math_modeling_/modeling/BatteryModel_图表复现版/generated_figures
